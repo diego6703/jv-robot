@@ -5,7 +5,7 @@ public class RobotRoute {
         int movesX = 0;
         int movesY = 0;
         if (toX > robot.getX()) {
-                movesX = toX - robot.getX();
+            movesX = toX - robot.getX();
             if (toY > robot.getY()) {
                 movesY = toY - robot.getY();
                 findDirection(robot, Direction.UP);
@@ -16,7 +16,7 @@ public class RobotRoute {
                 goRoad(robot, movesX, movesY);
             }
         } else {
-                movesX = robot.getX() - toX;
+            movesX = robot.getX() - toX;
             if (toY > robot.getY()) {
                 movesY = toY - robot.getY();
                 findDirection(robot, Direction.LEFT);
@@ -29,6 +29,7 @@ public class RobotRoute {
         }
 
     }
+
     public void findDirection(Robot robot, Direction direction) {
         while (robot.getDirection() != direction) {
             robot.turnRight();
